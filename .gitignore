@@ -1,0 +1,4 @@
+.env
+build/*
+*.pyc
+reports/coverage.json
