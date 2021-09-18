@@ -12,6 +12,6 @@ def isolate(fn_isolation):
 @pytest.fixture(scope="module")
 def contracts(IBFR, Vesting, accounts):
     token_contract = IBFR.deploy({'from': accounts[0]})
-    vesting_contract = Vesting.deploy(token_contract.address, {'from': accounts[0]})
+    vesting_contract = Vesting.deploy(token_contract.address, "SeedSale", {'from': accounts[0]})
     
     return token_contract, vesting_contract

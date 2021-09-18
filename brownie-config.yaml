@@ -3,3 +3,8 @@
 reports:
   exclude_contracts:
     - SafeMath
+
+compiler:
+    evm_version: istanbul
+    solc:
+        version: 0.8.0

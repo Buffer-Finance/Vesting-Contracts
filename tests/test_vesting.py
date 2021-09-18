@@ -80,7 +80,7 @@ def test_revoke_one_prevents_them_from_claiming(contracts, accounts, chain):
     tokens_left = vesting_contract.tokensAlloted(users[0]) - vesting_contract.tokensClaimed(users[0])
     vesting_contract.revoke(users[0], {'from': accounts[0]})
     contract_final_balance = token_contract.balanceOf(vesting_contract)
-    assert tokens_left == contract_final_balance - contract_initial_balance
+    assert tokens_left == contract_initial_balance - contract_final_balance
 
 
 def test_setup_vesting(contracts, accounts, chain):
